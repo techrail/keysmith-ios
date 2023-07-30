@@ -3,15 +3,15 @@ import ProjectDescription
 //App target constants
 let projName = "Keysmith"
 let orgName = "techRail"
-let projBundleId = "in.techrain.keysmith"
+let projBundleId = "in.techrail.keysmith"
 
 //App unit test target constants
 let projTestsName = projName+"Tests"
-let projTestsBundleId = "in.techrain.keysmithTests"
+let projTestsBundleId = "in.techrail.keysmithTests"
 
 //App UI test target constants
 let projUITestsName = projName+"UITests"
-let projUITestsBundleId = "in.techrain.keysmithUITests"
+let projUITestsBundleId = "in.techrail.keysmithUITests"
 
 let appInfoPlist: [String: InfoPlist.Value] = [
     "UILaunchScreen": [:]
