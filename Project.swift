@@ -24,7 +24,10 @@ let appTarget = Target(
     product: .app,
     bundleId: projBundleId,
     infoPlist: .extendingDefault(with: appInfoPlist),
-    sources: ["source/**"]
+    sources: ["source/**"],
+    dependencies: [
+        .external(name: "Dependiject")
+    ]
 )
 
 let unitTestTarget = Target(
