@@ -11,32 +11,33 @@ import Dependiject
 struct HomeView: View {
     //MARK: - PROPERTIES
     //TODO: uncomment when implemented
-//    @Store private var vm = Factory.shared.resolve((any HomeViewModel).self)
-
-    //TODO: move to view model
-    @State private var searchText = ""
+    @Store private var vm: any HomeViewModel = Factory.shared.resolve((any HomeViewModel).self)
+    
     
     //MARK: - BODY
     var body: some View {
+        //TODO: Use this VM and search logic
         NavigationStack {
-            Text("Home")
+            Text(vm.searchQuery)
                 .navigationTitle("")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         //TODO: the name of the menu should display currently selected filter.
-                        Menu("All Secrets") {
-                            //TODO: Create a button for each filter.
+                        Menu(String(describing: vm.selectedSecretType.self)) {
+                            //TODO: Create a button for each filter. Fix the filter cases
                             Button("All Secrets") {}
                             ForEach(SecretType.allCases, id: \.self) { secret in
-                                Button(secret.rawValue) {}
+                                Button(secret.rawValue) {
+                                    vm.selectSecretType(secret)
+                                }
                             }
                         }
                         .menuStyle(.automatic)
                     }
                 }
         }
-        .searchable(text: $searchText)
+        .searchable(text: $vm.searchQuery)
     }
 }
 
