@@ -20,11 +20,9 @@ protocol HomeViewModel: AnyObservableObject, ObservableObject {
     var errorMessage: String { get }
     
     ///The query provided in the search bar by the user.
-    ///
     var searchQuery: String { get set }
     
     ///Currently selected secret type.
-    ///
     var selectedSecretType: SecretType { get }
     
     ///List of secrets displayed in the list view.
@@ -32,6 +30,8 @@ protocol HomeViewModel: AnyObservableObject, ObservableObject {
     
     
     ///Updates the list of secrets with a specific type of secret.
-    ///
     func selectSecretType(_ secretType: SecretType)
+    
+    ///Searches the database for the given query.
+//    func search(query: String)
 }
