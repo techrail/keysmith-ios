@@ -1,0 +1,12 @@
+contents.xcworkspacedata
+.tuist-generated
+Keysmith.xcscheme
+project.pbxproj
+xcschememanagement.plist
+UserInterfaceState.xcuserstate
+Keysmith-Workspace.xcscheme
+WorkspaceSettings.xcsettings
+IDEWorkspaceChecks.plist
+Tuist/Dependencies/graph.json
+Tuist/Dependencies/Carthage
+Tuist/Dependencies/SwiftPackageManager
