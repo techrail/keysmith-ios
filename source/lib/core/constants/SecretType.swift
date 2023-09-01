@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum SecretType: String, CaseIterable {
+enum SecretType: String, CaseIterable, Codable {
     case Password, Note
 }

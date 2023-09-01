@@ -11,7 +11,7 @@ import Foundation
 ///These tags are created by user and as such each tag has unique ID.
 ///However, two tags are meant to be the same if their ``description`` matches,
 /// even if their ``id`` are mismatched.
-struct SecretTag: Equatable, Identifiable {
+struct SecretTag: Equatable, Identifiable, Hashable, Codable {
     let id: String
     let description: String
     
